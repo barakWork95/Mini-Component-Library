@@ -8,6 +8,10 @@ const config: StorybookConfig = {
     "@storybook/addon-docs",
   ],
   framework: "@storybook/react-vite",
+  viteFinal: async (config) => {
+    config.base = "/Mini-Component-Library/";
+    return config;
+  },
 };
 
 export default config;
